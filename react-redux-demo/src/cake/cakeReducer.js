@@ -1,6 +1,6 @@
 import { BUY_CAKE } from './cakeTypes'
 
-const initialState =  {
+export const initialState =  {
   numOfCakes: 10
 }
 
@@ -9,10 +9,12 @@ const cakeReducer = (state = initialState, action) => {
     case BUY_CAKE:
       return {
         ...state,
-        numOfCakes = state.numOfCakes - 1}
+        numOfCakes: state.numOfCakes - 1
+      }
       break
     default:
       return state
       break
   }
 }
+export default cakeReducer
